@@ -1,16 +1,15 @@
-
-class FizzBuzz
-    def check(number)
-        if number % 15 == 0
-            'FizzBuzz'
-        elsif number % 5 == 0
-            'Buzz'
-        elsif number % 3 == 0
-            'Fizz'
-        else
-            number
-        end
+def fizz_buzz(number)
+    if has_zero_remainder?(number, 15)
+        'fizz buzz'
+    elsif has_zero_remainder?(number, 5)
+        'buzz'
+    elsif has_zero_remainder?(number, 3)
+        'fizz'
+    else
+    number
     end
 end
 
-
+def has_zero_remainder?(number, divider)
+    number % divider == 0
+end
